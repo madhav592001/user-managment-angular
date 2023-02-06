@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="py-4">
+    <table class="table border shadow">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Department</th>
+          <th scope="col">Blood Group</th>
+          <th scope="col">Address</th>
+          <th scope="col">Contact Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <th scope="row">{{ user.sno }}</th>
+          <td>{{ user.name }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.department }}</td>
+          <td>{{ user.bloodGrp }}</td>
+          <td>{{ user.address }}</td>
+          <td>{{ user.contact }}</td>
+          <td>
+            <a
+              class="btn btn-primary btn-sm mx-2"
+              routerLink="view-user/{{ user.sno }}"
+            >
+              View
+            </a>
+            <a
+              class="btn btn-outline-primary btn-sm mx-2"
+              routerLink="/update-user/{{ user.sno }}"
+            >
+              Edit
+            </a>
+            <button
+              class="btn btn-danger btn-sm mx-2"
+              (click)="deleteUser(user)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

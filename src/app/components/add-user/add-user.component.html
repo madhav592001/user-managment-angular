@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<div class="container py-2">
+  <div class="w-75 mx-auto shadow p-5">
+    <h2 class="text-center mb-4">ADD USER</h2>
+    <form (submit)="onSubmit()">
+      <div class="form-group py-2">
+        <input
+          type="text"
+          class="form-control form-control-md"
+          placeholder="Enter Your Name"
+          [(ngModel)]="name"
+          name="name"
+        />
+      </div>
+      <div class="form-group py-2">
+        <input
+          type="text"
+          class="form-control form-control-md"
+          placeholder="Enter Your Age"
+          [(ngModel)]="age"
+          name="age"
+        />
+      </div>
+      <div class="form-group py-2">
+        <input
+          type="text"
+          class="form-control form-control-md"
+          placeholder="Enter Your Department"
+          [(ngModel)]="department"
+          name="department"
+        />
+      </div>
+      <div class="form-group py-2">
+        <input
+          type="text"
+          class="form-control form-control-md"
+          placeholder="Enter Your Blood group"
+          [(ngModel)]="bloodGrp"
+          name="bloodGrp"
+        />
+      </div>
+      <div class="form-group py-2">
+        <input
+          type="text"
+          class="form-control form-control-md"
+          placeholder="Enter Your Address"
+          [(ngModel)]="address"
+          name="address"
+        />
+      </div>
+      <div class="form-group py-2">
+        <input
+          type="text"
+          class="form-control form-control-md"
+          placeholder="Enter Your Phone Number"
+          [(ngModel)]="contact"
+          name="contact"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Add User</button>
+    </form>
+  </div>
+</div>
